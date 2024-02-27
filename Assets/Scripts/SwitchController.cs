@@ -13,13 +13,17 @@ public class SwitchController : MonoBehaviour
   }
   public Color offColor;
   public Color onColor;
+  public float poin = 10;
 
   private SwitchState state;
   private Renderer switchRenderer;
+  ScoreManager scoreManager;
 
   private void Start()
   {
     switchRenderer = GetComponent<Renderer>();
+    scoreManager = GameObject.FindGameObjectWithTag("ScoreManager").GetComponent<ScoreManager>();
+
 
     Set(false);
 
@@ -31,6 +35,7 @@ public class SwitchController : MonoBehaviour
     if (other.gameObject.tag == "Ball")
     {
       Toggle();
+      scoreManager.AddScore(poin);
     }
   }
 
