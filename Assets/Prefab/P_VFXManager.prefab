@@ -45,3 +45,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vfxSource: {fileID: 301802757601140788, guid: de1bbfafe6154c147afefac2468a0bd2, type: 3}
+  vfxSwitch: {fileID: 301802757601140788, guid: 0eab0df9dc1fed54d8d8377e5f110ef5, type: 3}

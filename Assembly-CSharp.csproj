@@ -71,6 +71,7 @@
     <Compile Include="Assets\Scripts\BallController.cs" />
     <Compile Include="Assets\Scripts\BumperController.cs" />
     <Compile Include="Assets\Scripts\VFXManager.cs" />
+    <Compile Include="Assets\Scripts\CreditsUIController.cs" />
     <Compile Include="Assets\Scripts\TriggerGameOver.cs" />
     <Compile Include="Assets\Scripts\LauncherController.cs" />
     <Compile Include="Assets\Scripts\GameOverUIController.cs" />

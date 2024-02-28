@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class SwitchController : MonoBehaviour
 {
@@ -18,12 +19,15 @@ public class SwitchController : MonoBehaviour
   private SwitchState state;
   private Renderer switchRenderer;
   ScoreManager scoreManager;
+  AudioManager audioManager;
+  VFXManager VFXmanager;
 
   private void Start()
   {
     switchRenderer = GetComponent<Renderer>();
     scoreManager = GameObject.FindGameObjectWithTag("ScoreManager").GetComponent<ScoreManager>();
-
+    audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
+    VFXmanager = GameObject.FindGameObjectWithTag("VFXManager").GetComponent<VFXManager>();
 
     Set(false);
 
@@ -35,12 +39,14 @@ public class SwitchController : MonoBehaviour
     if (other.gameObject.tag == "Ball")
     {
       Toggle();
+      VFXmanager.PlayVFXSwitch(transform.position);
       scoreManager.AddScore(poin);
     }
   }
 
   private void Set(bool active)
   {
+    
     if (active == true)
     {
       state = SwitchState.On;
@@ -60,10 +66,14 @@ public class SwitchController : MonoBehaviour
     if (state == SwitchState.On)
     {
       Set(false);
+      audioManager.PlaySFXSwitchOff(transform.position);
+
     }
     else
     {
       Set(true);
+      audioManager.PlaySFXSwitchOn(transform.position);
+
     }
   }
 

@@ -459,6 +459,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Paddle
       objectReference: {fileID: 0}
+    - target: {fileID: 6296929679186606709, guid: 4c3316abad514584485c71612a2218ba, type: 3}
+      propertyPath: m_Spring.damper
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6457267001237692172, guid: 4c3316abad514584485c71612a2218ba, type: 3}
+      propertyPath: m_Spring.damper
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2419,10 +2427,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4737562194689726303, guid: 91941a0770ec9d94183e9805df0df4f2, type: 3}
-      propertyPath: sfxAudioSource
-      value: 
-      objectReference: {fileID: 8294911643552253661, guid: 0f5191b98f522fc459b0dc0de685ed09, type: 3}
     - target: {fileID: 8195977472239906112, guid: 91941a0770ec9d94183e9805df0df4f2, type: 3}
       propertyPath: m_Name
       value: AudioManager

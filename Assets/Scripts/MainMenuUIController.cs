@@ -6,12 +6,14 @@ public class MainMenuUIController : MonoBehaviour
 {
     [SerializeField] Button playButton;
     [SerializeField] Button exitButton;
+    [SerializeField] Button creditsButton;
 
 
     private void Start()
     {
         playButton.onClick.AddListener(PlayGame);
         exitButton.onClick.AddListener(ExitGame);
+        creditsButton.onClick.AddListener(GoToCredits);
     }
 
     public void PlayGame()
@@ -22,5 +24,11 @@ public class MainMenuUIController : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void GoToCredits()
+    {
+        SceneManager.LoadScene("S_CreditsMenu");
+    }
+
 
 }
